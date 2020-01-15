@@ -1,0 +1,4 @@
+cat ~/.bashrc | grep pytodo
+if [ $? -ne 0 ];then
+   echo "alias pytodo=\"${PWD}/venv/bin/python3 ${PWD}/pytodo/script\"" >> ~/.bashrc
+fi

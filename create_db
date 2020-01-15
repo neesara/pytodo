@@ -1,0 +1,8 @@
+mongo <<EOF
+use todo-app
+db.createCollection('todos')
+db.config.drop()
+db.createCollection("config")
+db.config.insert({"quote":true})
+EOF
+
